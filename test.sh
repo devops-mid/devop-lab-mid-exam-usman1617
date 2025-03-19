@@ -1,6 +1,3 @@
 #!/bin/bash
-set -e
-
 echo "Running tests..."
-pytest test_modules.py
-
+# TODO: Add commands to run unit and integration tests

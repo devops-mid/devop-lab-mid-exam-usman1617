@@ -3,11 +3,10 @@ kind: Service
 metadata:
   name: web-app-service
 spec:
+  type: NodePort
   selector:
     app: web-app
   ports:
     - protocol: TCP
-      port: 80         
-      targetPort: 5000 
-  type: LoadBalancer   
-
+      port: 5000
+      targetPort: 5000

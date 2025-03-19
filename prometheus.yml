@@ -1,7 +1,11 @@
 global:
-  scrape_interval: 15s
+  scrape_interval: 15s  
 
 scrape_configs:
   - job_name: 'flask-app'
+    metrics_path: '/metrics'  
     static_configs:
-      - targets: ['flask-app:5000']
+      - targets: ['web-app-service:5000']  
+        labels:
+          app: 'flask-web-app'
+
